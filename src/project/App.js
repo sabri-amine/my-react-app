@@ -2,11 +2,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Cards from './Cards';
-import Contact from './Contact'; 
 import SignIn from './SignIn'; 
 import DetailsPage from './details';
 import Sabonner from './Sabonner';
 import SignUp from './SignUp';
+import AuthData from './AuthData';
 
 
 export default function App() {
@@ -14,11 +14,11 @@ export default function App() {
     <Router>
       <div>
         <Routes>
-          <Route path="/" element={<Cards />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/Cards" element={<Cards />} />
           <Route path="/sabonner" element={<Sabonner/>} />
-          <Route path="/signin" element={<SignIn />} />
+          <Route path="/" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/AuthData" element={<AuthData />} />
           <Route path="/details/:id" element={<DetailsPage/>} />
         </Routes>
       </div>

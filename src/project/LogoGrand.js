@@ -18,7 +18,7 @@ margin:40px;
 export default function ReactModel() {
     return (
     <LogoSinglPage>
-        <Link className='Logo' to="/"><span>Movie</span>Time</Link>
+        <Link className='Logo' to="/Cards"><span>Movie</span>Time</Link>
     </LogoSinglPage>
     )
 }

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import AuthData from './AuthData';
 
 const HeaderWrapper = styled.header`
   background-color: #333;
@@ -99,9 +100,9 @@ const Header = ({ onSearch, onGenreChange }) => {
         <Link className='Logo' to="/"><span>Movie</span>Time</Link>
         <Nav>
           <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
+            <li><Link to="/Cards">Home</Link></li>
+            <li><Link to="/sabonner">Pricing</Link></li>
+            <li><Link to="/watchlist">WatchList</Link></li>
           </ul>
         </Nav>
         <SearchInput
@@ -111,8 +112,9 @@ const Header = ({ onSearch, onGenreChange }) => {
           onChange={(e) => handleSearch(e.target.value)}
         />
         <UserIcons>
-          <Link to="/sabonner" className='sabonner' >S'ABONNER</Link>
-          <Link to="/signin" className='signin'>SIGN IN</Link>
+          <AuthData/>
+          {/* <Link to="/sabonner" className='sabonner' >S'ABONNER</Link> */}
+         
         </UserIcons>
       </HeaderWrapper>
     </div>

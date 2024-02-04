@@ -5,6 +5,7 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { useParams } from 'react-router-dom';
 import Header from './Header';
+import Coommenter from './mesaage';
 
 const DetailContainer = styled.div`
 // display: flex;
@@ -102,6 +103,7 @@ const fetchData = async () => {
         </DetailCard>
     )}
     </DetailContainer>
+    <Coommenter/>
     </>
 );
 };
