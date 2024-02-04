@@ -51,9 +51,10 @@ const Nav = styled.nav`
 const SearchInput = styled.input`
   border-radius: 5px;
   margin-left: auto;
-  margin-top:1px;
-  padding: 4px 15px;
-  border: 3px solid;
+  padding: 4px 2px;
+  border: 3px solid #fff;
+  height:32px ;
+  weight:50px;
 `;
 
 const UserIcons = styled.div`
@@ -97,7 +98,7 @@ const Header = ({ onSearch, onGenreChange }) => {
   return (
     <div>
       <HeaderWrapper>
-        <Link className='Logo' to="/"><span>Movie</span>Time</Link>
+        <Link className='Logo' to="/Cards"><span>Movie</span>Time</Link>
         <Nav>
           <ul>
             <li><Link to="/Cards">Home</Link></li>
