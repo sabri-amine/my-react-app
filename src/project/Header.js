@@ -113,7 +113,7 @@ const Header = ({ onSearch, onGenreChange }) => {
         />
         <UserIcons>
           <AuthData/>
-          {/* <Link to="/sabonner" className='sabonner' >S'ABONNER</Link> */}
+          {/* <Link to="/" className='sabonner' >SIGN IN</Link> */}
          
         </UserIcons>
       </HeaderWrapper>
