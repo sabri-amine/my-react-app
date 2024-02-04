@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import img1 from "../imagesMarc/tele.webp"
+import Footer from './Footer';
 import ReactModel from './LogoGrand';
 
 const Container = styled.div`
@@ -141,6 +142,7 @@ return (
         <img src={img1} style={{ width: '100%' }} />
 
     </div>
+    <Footer/>
     </>
 );
 };

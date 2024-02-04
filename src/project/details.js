@@ -4,6 +4,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { useParams } from 'react-router-dom';
+import Header from './Header';
 
 const DetailContainer = styled.div`
 // display: flex;
@@ -19,7 +20,7 @@ border-radius: 8px;
 max-width:100%;
 height:600px;
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-text-align: center;
+
 display: flex;
 `;
 
@@ -34,13 +35,19 @@ const CommentSection = styled.div`
 display: flex;
 flex-direction: column;
 width:894px;
-align-items: center;
+margin:20px 0 0 40px;
+
 
 
 p{
     overflow: hedden;
     margin-top:-10px;
     width:500px;
+}
+i{
+    margin:5px 5px ;
+    font-size:23px;
+    color:red;
 }
 
 
@@ -70,32 +77,32 @@ const fetchData = async () => {
     }
 };
 
-const handleButtonClick = () => {
-    // Implement your logic when the button is clicked
-    setComment(movieDetails.description);
-};
+
 
     return (
+        <>
+        <Header/>
     <DetailContainer>
         {movieDetails && (
         <DetailCard>
             <DetailImage src={movieDetails.photo} alt={movieDetails.nom} />
             <CommentSection>
-                <h2>{movieDetails.nom}</h2>
-                <p>Description :</p>
-                <span></span>
-                <p>{movieDetails.nom}</p>
-                <span></span>
-                <h5></h5>
-                <p></p>
-                <p></p>
-                <p>{comment}</p>
-
-                <Button onClick={handleButtonClick}>Show</Button>
+                <h1 style={{ textAlign:'center',fontWeight:"900"}}>{movieDetails.nom}</h1>
+                <div style={{display:'flex' , marginLeft:'10px', marginTop: '40px'}}>
+                    <p>Date</p>
+                    <p>duree</p>
+                    <p>genre</p>
+                </div>
+                <div style={{ margin:'10px'}}><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                <p style={{ marginTop:'10px'}}>{movieDetails.description}</p>
+                <button type='submit' style={{ width:"200px",marginTop:'10px'}}><i class="bi bi-play-fill"></i>Add watchlist</button>
+                <div><i class="bi bi-badge-hd"></i><i class="bi bi-badge-4k"></i><i class="bi bi-badge-3d"></i></div>
+                
             </CommentSection>
         </DetailCard>
     )}
     </DetailContainer>
+    </>
 );
 };
 
