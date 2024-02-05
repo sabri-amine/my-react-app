@@ -7,7 +7,7 @@ const Scroll = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolledEnough = window.scrollY > 200; // يمكنك تعديل هذا الرقم حسب احتياجاتك
+      const isScrolledEnough = window.scrollY > 200; 
       setIsVisible(isScrolledEnough);
     };
     window.addEventListener('scroll', handleScroll);
@@ -38,7 +38,7 @@ const Scroll = () => {
         padding: '10px 6px',
         borderRadius: '10px',
         fontWeight: 'bold',
-        background: 'linear-gradient(to right, #f59e0b, #008CBA)'
+        backgroundColor: 'red'
         
         
       }}

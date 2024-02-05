@@ -23,6 +23,7 @@ background-color: #fff;
 padding: 1.5rem;
 border-radius: 1rem;
 box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+background:#000;
 `;
 
 const Title = styled.h1`
@@ -31,6 +32,7 @@ text-transform: uppercase;
 font-weight: 900;
 margin-bottom: 1rem;
 text-align: center;
+color:#fff;
 `;
 
 const Price = styled.h2`
@@ -38,18 +40,20 @@ font-size: 1.5rem;
 font-weight: bold;
 margin-bottom: 1rem;
 text-align: center;
+color:#fff;
 
 span {
     font-size: 0.75rem;
     font-weight: normal;
     margin-left: 0.5rem;
+    color:#fff;
 }
 `;
 
 const Separator = styled.div`
 height: 0.2rem;
 width: 50%;
-background-color: #007bff;
+background-color: red;
 margin: 1rem auto;
 `;
 
@@ -59,6 +63,7 @@ padding: 0;
 margin: 1rem 0;
 font-size: 0.875rem;
 text-align: left;
+color:#fff;
 
     li {
         margin-bottom: 0.5rem;
@@ -71,7 +76,6 @@ text-align: left;
 }
 
     li.text-muted {
-        color: #6c757d;
         text-decoration: line-through;
 }
 `;
@@ -80,8 +84,9 @@ const SubscribeButton = styled.a`
 display: block;
 width: 100%;
 padding: 0.5rem;
-background-color: #007bff;
+background-color:red;
 color: #fff;
+border:1px solid red;
 text-align: center;
 text-decoration: none;
 border-radius: 1rem;
@@ -125,7 +130,7 @@ return (
             <Separator />
             <FeatureList>
                 {card.features.map((feature, i) => (
-                <li key={i}><i className="bi bi-check-lg text-primary"></i>{feature}</li>
+                <li key={i}><i className="bi bi-check-lg text-success"></i>{feature}</li>
             ))}
                 {card.features2.map((feature1, i) => (
                 <li key={i} className="text-muted"><i className="bi bi-x-lg text-danger"></i><del>{feature1}</del></li>
@@ -137,8 +142,8 @@ return (
         ))}
     </Container>
     <div>
-        <h3 style={{ marginLeft: '50px',fontWeight:'bold' }}>MOVIETAME DISPO LÀ ET PUIS AUSSI LÀ</h3>
-        <p style={{ marginLeft: '50px' }}>Commencez votre visionnage sur mobile ou tablette et finissez sur ordinateur ou télévision, ou l’inverse. C’est vous qui décidez !</p>
+        <h3 style={{ marginLeft: '50px',fontWeight:'bold',color:"#fff" }}>WATCHIN DISPO LA ET PUIS AUSSI LA</h3>
+        <p style={{ marginLeft: '50px',color:"#fff"  }}>Commencez votre visionnage sur mobile ou tablette et finissez sur ordinateur ou télévision, ou l’inverse. C’est vous qui décidez !</p>
         <img src={img1} style={{ width: '100%' }} />
 
     </div>

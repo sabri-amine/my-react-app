@@ -1,32 +1,12 @@
-
-// import React from 'react';
-// import styled from 'styled-components';
-
-// const FooterContainer = styled.footer`
-// background-color: #333;
-// color: #fff;
-// padding: 20px 0 5px 0;
-// text-align: center;
-// `;
-
-// const Footer = () => {
-//     return (
-//     <FooterContainer>
-//         <p>© 2024 Your Company. All rights reserved.</p>
-//     </FooterContainer>
-//     );
-// };
-
-// export default Footer;
-
 // Footer.js
 import React from 'react';
 import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import img1 from "../Images/logo.png"
+
 
 
 const StyledFooter = styled.footer`
-  background-color: #1c2331;
+  background-color: #0005;
   color: #fff;
 `;
 
@@ -62,16 +42,19 @@ const LinkColumn = styled.div`
 
 const UsefulLink = styled.p`
   margin: 0.5rem 0;
+  a{
+    text-decoration:none;
+  }
 `;
 
-const ContactSection = styled.section`
-  background-color: rgba(0, 0, 0, 0.2);
-  padding: 1rem 0;
-`;
 
 const CopyrightSection = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
-  padding: 1rem 0;
+  padding: 1rem ;
+  a{
+    text-decoration:none;
+    margin-left:5px;
+  }
 `;
 
 const Footer = () => {
@@ -79,7 +62,7 @@ const Footer = () => {
     <StyledFooter>
       <SocialIconsContainer>
         <div>
-          <span style={{color:"#008CBA",fontWeight:"900",fontSize:"30px"}}><span style={{color:"#f59e0b" , fontWeight:"900"}}>Movie</span>Time</span>
+          <span style={{color:"#008CBA",fontWeight:"900",fontSize:"30px"}}><img src={img1} style={{width:"180px"}}/></span>
         </div>
         <div>
           <SocialIconLink href="#">
@@ -126,7 +109,7 @@ const Footer = () => {
               />
               <UsefulLink>
                 <a href="#!" className="text-white">
-                  MDBootstrap
+                  MDPress
                 </a>
               </UsefulLink>
               <UsefulLink>
@@ -137,11 +120,6 @@ const Footer = () => {
               <UsefulLink>
                 <a href="#!" className="text-white">
                   BrandFlow
-                </a>
-              </UsefulLink>
-              <UsefulLink>
-                <a href="#!" className="text-white">
-                  Bootstrap Angular
                 </a>
               </UsefulLink>
             </LinkColumn>
@@ -155,11 +133,6 @@ const Footer = () => {
               <UsefulLink>
                 <a href="#!" className="text-white">
                   Your Account
-                </a>
-              </UsefulLink>
-              <UsefulLink>
-                <a href="#!" className="text-white">
-                  Become an Affiliate
                 </a>
               </UsefulLink>
               <UsefulLink>
@@ -181,17 +154,14 @@ const Footer = () => {
                 style={{ width: '60px', backgroundColor: '#7c4dff', height: '2px' }}
               />
               <p> 
-                <i class="bi bi-house-fill mr-3">New York, NY 10012, US</i>
+                <i class="bi bi-house-fill mr-3">  New York, NY 10012, US</i>
               </p>
               <p>
-                <i class="bi bi-envelope-fill mr-3">info@example.com</i>
+                <i class="bi bi-envelope-fill mr-3">  info@example.com</i>
               </p>
               <p>
                  
-                <i class="bi bi-telephone-fill mr-3">+ 01 234 567 88</i>
-              </p>
-              <p>
-              <i class="bi bi-printer-fill mr-3">+ 01 234 567 88</i>
+                <i class="bi bi-telephone-fill mr-3">  + 01 234 567 88</i>
               </p>
             </LinkColumn>
           </LinksContainer>
@@ -199,9 +169,9 @@ const Footer = () => {
       </LinksSection>
 
       <CopyrightSection className="text-center p-3">
-        © 2020 Copyright:
+        © 2020 Copyright:   
         <a href="https://mdbootstrap.com/" className="text-white">
-          MDBootstrap.com
+          MDPress.com
         </a>
       </CopyrightSection>
     </StyledFooter>

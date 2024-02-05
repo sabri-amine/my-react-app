@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import AuthData from './AuthData';
-
+import img1 from "../Images/logo.png"
 const HeaderWrapper = styled.header`
   background-color: #333;
   color: #fff;
@@ -30,7 +30,8 @@ const Nav = styled.nav`
   ul {
     list-style: none;
     display: flex;
-    margin:0;
+    margin:8px 0 0 0;
+    font-family: 'Nunito', sans-serif;
   }
 
   ul li {
@@ -98,7 +99,7 @@ const Header = ({ onSearch, onGenreChange }) => {
   return (
     <div>
       <HeaderWrapper>
-        <Link className='Logo' to="/Cards"><span>Movie</span>Time</Link>
+        <Link className='Logo' to="/Cards"><img src={img1} style={{width:"160px"}}/></Link>
         <Nav>
           <ul>
             <li><Link to="/Cards">Home</Link></li>
@@ -115,7 +116,6 @@ const Header = ({ onSearch, onGenreChange }) => {
         <UserIcons>
           <AuthData/>
           {/* <Link to="/" className='sabonner' >SIGN IN</Link> */}
-         
         </UserIcons>
       </HeaderWrapper>
     </div>

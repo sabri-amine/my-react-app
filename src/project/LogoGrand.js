@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-
+import img1  from '../Images/logo.png';
 const LogoSinglPage = styled.div`
 margin:40px;
     .Logo {
         font-size: 40px;
-        font-weight: 900;
+        weight: ;
         color: #008CBA;
         text-decoration: none;
     }
@@ -18,7 +18,7 @@ margin:40px;
 export default function ReactModel() {
     return (
     <LogoSinglPage>
-        <Link className='Logo' to="/Cards"><span>Movie</span>Time</Link>
+        <Link className='Logo' to="/Cards"><img src={img1} style={{width:"210px"}}/></Link>
     </LogoSinglPage>
     )
 }

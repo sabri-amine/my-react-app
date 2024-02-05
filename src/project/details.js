@@ -16,10 +16,10 @@ height:600px;
 `;
 
 const DetailCard = styled.div`
-border: 1px solid #ccc;
+
 border-radius: 8px;
 max-width:100%;
-height:600px;
+height:602px;
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
 display: flex;
@@ -88,16 +88,16 @@ const fetchData = async () => {
         <DetailCard>
             <DetailImage src={movieDetails.photo} alt={movieDetails.nom} />
             <CommentSection>
-                <h1 style={{ textAlign:'center',fontWeight:"900"}}>{movieDetails.nom}</h1>
-                <div style={{display:'flex' , marginLeft:'10px', marginTop: '40px'}}>
+                <h1 style={{ textAlign:'center',fontWeight:"900",color:'#fff'}}>{movieDetails.nom}</h1>
+                <div style={{display:'flex' , marginLeft:'10px', marginTop: '40px',color:'#fff'}}>
                     <p>{movieDetails.date}</p>
                     <p>{movieDetails.duree}</p>
                     <p>{movieDetails.genre}</p>
                 </div>
                 <div><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-                <p style={{ marginTop:'10px'}}>{movieDetails.description}</p>
-                <button type='submit' style={{ width:"200px",marginTop:'10px'}}><i class="bi bi-play-fill"></i>Add watchlist</button>
-                <div><i class="bi bi-badge-hd"></i><i class="bi bi-badge-4k"></i><i class="bi bi-badge-3d"></i></div>
+                <p style={{ marginTop:'10px',color:'#fff'}}>{movieDetails.description}</p>
+                <button type='submit' style={{ width:"200px",marginTop:'10px',border:"2px solid #fff",borderRadius:"10px"}}><i class="bi bi-play-fill"></i>Add watchlist</button>
+                <div style={{ marginTop:'10px'}}><i class="bi bi-badge-hd"></i><i class="bi bi-badge-4k"></i><i class="bi bi-badge-3d"></i></div>
                 
             </CommentSection>
         </DetailCard>

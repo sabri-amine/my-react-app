@@ -1,138 +1,9 @@
-// import React, { useState } from 'react';
-// import styled from 'styled-components';
-// import { Link } from 'react-router-dom';
-// import { createUserWithEmailAndPassword } from 'firebase/auth'; // تحديث الاستيراد
-
-// import { auth } from './firebase';
-
-// const SignUpWrapper = styled.div`
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   height: 100vh;
-// `;
-
-// const SignUpForm = styled.form`
-//   width: 350px;
-//   padding: 20px;
-//   border: 1px solid #ccc;
-//   border-radius: 5px;
-//   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-// `;
-
-// const FormTitle = styled.h2`
-//   text-align: center;
-//   margin-bottom: 20px;
-// `;
-
-// const FormLabel = styled.label`
-//   display: block;
-//   margin-bottom: 8px;
-// `;
-
-// const FormInput = styled.input`
-//   width: 95%;
-//   padding: 8px;
-//   margin-bottom: 16px;
-//   border: 1px solid #ccc;
-//   border-radius: 4px;
-// `;
-
-// const FormButton = styled(Link)`
-//   width: 100%;
-//   padding: 10px;
-//   background-color: #f59e0b;
-//   color: #fff;
-//   border: none;
-//   border-radius: 4px;
-//   cursor: pointer;
-// `;
-
-// const SignInLink = styled.div`
-//   text-align: center;
-//   margin-top: 10px;
-// `;
-
-// const SignInText = styled.span`
-//   color: #555;
-// `;
-
-// const SignInButton = styled(Link)`
-//   color: #008CBA;
-//   cursor: pointer;
-//   text-decoration: underline;
-
-//   &:hover {
-//     color: #006080;
-//   }
-// `;
-
-// const SignUp = () => {
-//   const [email, setEmail] = useState('');
-//   const [password, setPassword] = useState('');
-
-//   const register = (e) => {
-//     e.preventDefault();
-//     createUserWithEmailAndPassword(auth, email, password)
-//       .then((userCredential) => {
-//         console.log(userCredential);
-//       })
-//       .catch((error) => {
-//         console.error('Error Code:', error.code);
-//         console.error('Error Message:', error.message);
-//       });
-//   };
-  
-
-//   return (
-//     <>
-     
-//       <SignUpWrapper>
-//         <SignUpForm onSubmit={register}>
-//           <FormTitle>Sign Up</FormTitle>
-//           <FormLabel htmlFor="username">Username</FormLabel>
-//           <FormInput type="text" id="username" name="username" required />
-
-//           <FormLabel htmlFor="email">Email</FormLabel>
-//           <FormInput
-//             type="email"
-//             id="email"
-//             name="email"
-//             value={email}
-//             onChange={(e) => setEmail(e.target.value)}
-//             required
-//           />
-
-//           <FormLabel htmlFor="password">Password</FormLabel>
-//           <FormInput
-//             type="password"
-//             id="password"
-//             name="password"
-//             value={password}
-//             onChange={(e) => setPassword(e.target.value)}
-//             required
-//           />
-
-//           <FormButton to="/" type="submit">Sign Up</FormButton>
-
-//           <SignInLink>
-//             <SignInText>Don't have an account? </SignInText>
-//             <SignInButton to="/">Sign In</SignInButton>
-//           </SignInLink>
-//         </SignUpForm>
-//       </SignUpWrapper>
-//     </>
-//   );
-// };
-
-// export default SignUp;
-
-
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from './firebase';
+import img1 from '../Images/imge1.jpg'
 
 const SignUpWrapper = styled.div`
   display: flex;
@@ -142,39 +13,43 @@ const SignUpWrapper = styled.div`
 `;
 
 const SignUpForm = styled.form`
-  width: 350px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  width: 370px;
+  padding:30px;
+  border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #000;
 `;
 
 const FormTitle = styled.h2`
   text-align: center;
   margin-bottom: 20px;
+  color: #fff ;
 `;
 
 const FormLabel = styled.label`
   display: block;
-  margin-bottom: 8px;
+  margin:0 0 8px 10px;
+  color: #fff ;
 `;
 
 const FormInput = styled.input`
   width: 95%;
   padding: 8px;
-  margin-bottom: 16px;
+  margin:0 0 16px 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
 `;
 
 const FormButton = styled.button`
-  width: 100%;
+  width:70%;
   padding: 10px;
-  background-color: #f59e0b;
+  margin:0 0 0 50px;
+  background-color: red;
   color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-weight: bold;
 `;
 
 const SignInLink = styled.div`
@@ -183,16 +58,16 @@ const SignInLink = styled.div`
 `;
 
 const SignInText = styled.span`
-  color: #555;
+  color: #fff;
 `;
 
 const SignInButton = styled(Link)`
-  color: #008CBA;
+  color: red;
   cursor: pointer;
-  text-decoration: underline;
+  text-decoration: none;
 
   &:hover {
-    color: #006080;
+    color: #ff0000ae;
   }
 `;
 
@@ -213,10 +88,10 @@ const SignUp = () => {
   };
 
   return (
-    <SignUpWrapper>
+    <SignUpWrapper style={{ background: `url(${img1})no-repeat center center fixed`,backgroundSize: 'cover', }}>
       <SignUpForm onSubmit={register}>
         <FormTitle>Sign Up</FormTitle>
-        <FormLabel htmlFor="username">Username</FormLabel>
+        <FormLabel htmlFor="username">Username :</FormLabel>
         <FormInput
           type="text"
           id="username"
@@ -226,7 +101,7 @@ const SignUp = () => {
           required
         />
 
-        <FormLabel htmlFor="email">Email</FormLabel>
+        <FormLabel htmlFor="email">Email :</FormLabel>
         <FormInput
           type="email"
           id="email"
@@ -236,7 +111,7 @@ const SignUp = () => {
           required
         />
 
-        <FormLabel htmlFor="password">Password</FormLabel>
+        <FormLabel htmlFor="password">Password :</FormLabel>
         <FormInput
           type="password"
           id="password"

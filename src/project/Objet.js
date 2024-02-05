@@ -1,27 +1,14 @@
-// import React from 'react'
-// const cardDataArray =[
-//     {img: "../imagesMarc/disney+.webp"},{img: "../imagesMarc/netflix.webp"},{img: "../imagesMarc/tv+.webp"}
-// ]
-// export default function objet() {
-//     return (
-//         <div>
-//             {cardDataArray.map((cardData,index)=>(
-//                 <div key={index}>
-//                     <img src={cardData.img} alt="Card Image"/> 
-//                 </div>
-//             ))}
-//         </div>
-//     )
-// }
-
-
 
 import React from 'react';
 import styled from 'styled-components';
 import img1 from "../imagesMarc/netflix.webp";
+import img2 from "../imagesMarc/disney+.webp";
+import img3 from "../imagesMarc/tv+.webp";
+import img4 from "../imagesMarc/canal+.svg";
+import img5 from "../imagesMarc/primeVidio.svg";
 
 const CardContainer = styled.div`
-  border: 1px solid #ccc;
+  border: 3px solid #ccc;
   padding: 10px;
   border-radius: 8px;
   height: 70px; 
@@ -36,11 +23,11 @@ const CardImage = styled.img`
 `;
 
 const CardDataArray = [
-  { imge: "../imagesMarc/disney+.webp",titre: "amine" },
-  { imge: "../imagesMarc/netflix.webp",titre: "tt" },
-  { imge: "../imagesMarc/tv+.webp",titre: "bb" },
-  { imge: "../imagesMarc/tv+.webp",titre: "vv" },
-  { imge: "../imagesMarc/tv+.webp",titre: "xx" },
+  { imge: img1,titre: "amine" },
+  { imge: img2,titre: "tt" },
+  { imge: img3,titre: "bb" },
+  { imge: img4,titre: "vv" },
+  { imge: img5,titre: "xx" },
 ];
 
 export default function CardComponent() {

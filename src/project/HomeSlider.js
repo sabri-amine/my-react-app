@@ -3,16 +3,16 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import styled from 'styled-components';
-import img1 from "../Images/selider.1.jpg"
-import img12 from "../Images/106042264.webp"
-import img13 from "../Images/img13.webp"
-import img14 from "../Images/img3.jpg"
-import img11 from "../Images/img11.webp"
+import imge1 from "../Images/imge1.jpg"
+import imge2 from "../Images/imge2.jpeg"
+import imge4 from "../Images/img10.png"
+import imge5 from "../Images/imge5.jpeg"
 
 const StyledSlider = styled(Slider)` 
     width: 100%;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    opacity: .4;
 `;
 
 const SlideItem = styled.div`
@@ -37,16 +37,16 @@ const SingleSlider = () => {
     return (
         <StyledSlider {...settings}>
             <SlideItem>
-                <img src={img1} alt="Ad 2" />
+                <img src={imge1} alt="Ad 2" />
             </SlideItem>
             <SlideItem>
-                <img src={img11} alt="Ad 1" />
+                <img src={imge2} alt="Ad 1" />
             </SlideItem>
             <SlideItem>
-                <img src={img12 } alt="Ad 3" />
+                <img src={imge4} alt="Ad 4" />
             </SlideItem>
             <SlideItem>
-                <img src={img14} alt="Ad 4" />
+                <img src={imge5 } alt="Ad 3" />
             </SlideItem>
         </StyledSlider>
     );

@@ -16,7 +16,7 @@ const CardContainer = styled.div`
 `;
 
 const Card = styled.div`
-  border: 1px solid #ccc;
+  border: 3px solid #fff;
   border-radius: 8px;
   padding: px;
   margin: 5px;
@@ -108,18 +108,21 @@ h6{
   padding: 5px 0px 5px 10px;
   font-size: 13px;
   margin: 0;
+  font-weight: bold;
 }
 h6 span{
-  color:#000;
-  background: yellow;
+  color:#fff;
+  background: red;
   padding: 2px 5px ;
   box-sizing: 5px;
+  font-weight: bold;
   margin: 0;
 }
 h6 .bi{
-  color: yellow;
+  color: red;
   font-size: 15px;
   margin-left: 5px;
+  
 }
 `;
 
