@@ -337,7 +337,7 @@ const Coommenter = () => {
 
   return (
     <PageWrapper>
-      <h1>LES COMMENTER</h1>
+      <h1 style={{fontWeight:"bold"}}>LES COMMENTER</h1>
       <CommentSection>
         <FixedCommentWrapper>
           <FixedComment>

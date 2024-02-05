@@ -43,12 +43,12 @@ margin:20px 0 0 40px;
 p{
     overflow: hedden;
     margin-top:-10px;
-    width:500px;
+    width:100%;
 }
 i{
     margin:5px 5px ;
     font-size:23px;
-    color:red;
+    color:#ffa500;
 }
 
 
@@ -90,11 +90,11 @@ const fetchData = async () => {
             <CommentSection>
                 <h1 style={{ textAlign:'center',fontWeight:"900"}}>{movieDetails.nom}</h1>
                 <div style={{display:'flex' , marginLeft:'10px', marginTop: '40px'}}>
-                    <p>Date</p>
-                    <p>duree</p>
-                    <p>genre</p>
+                    <p>{movieDetails.date}</p>
+                    <p>{movieDetails.duree}</p>
+                    <p>{movieDetails.genre}</p>
                 </div>
-                <div style={{ margin:'10px'}}><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                <div><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
                 <p style={{ marginTop:'10px'}}>{movieDetails.description}</p>
                 <button type='submit' style={{ width:"200px",marginTop:'10px'}}><i class="bi bi-play-fill"></i>Add watchlist</button>
                 <div><i class="bi bi-badge-hd"></i><i class="bi bi-badge-4k"></i><i class="bi bi-badge-3d"></i></div>

@@ -35,9 +35,9 @@ const AuthData = () => {
     <div >
       {authUser && (
         <div style={{display:"flex",alignItems:"center"}}>
-          <p style={{margin:"0",padding:"2px",border:"2px solid ",height:"32px",borderRadius:"5px",margin:"0 0 0 5px",}}>{authUser.displayName || authUser.email}!</p>
-          <button style={{margin:"0 0 2px 5px",border:"2px solid #008CBA",height:"32px",borderRadius:"5px",background:"#008CBA"}} type="button" onClick={userSignOut}>
-          sign out
+          <p style={{margin:"0",padding:"2px",border:"2px solid #f59e0b",height:"32px",borderRadius:"5px",margin:"0 0 0 5px",background:"#f59e0b",color:"#000",fontWeight:"bold"}}>{authUser.displayName || authUser.email}</p>
+          <button style={{margin:"0 0 2px 5px",border:"2px solid #008CBA",height:"32px",borderRadius:"5px",background:"#008CBA",fontWeight:"bold"}} type="button" onClick={userSignOut}>
+          Sign Out
           </button>
         </div>
       )}
