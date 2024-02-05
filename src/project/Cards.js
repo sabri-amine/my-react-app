@@ -40,7 +40,7 @@ const Select = styled.select`
   background-color: #fff;
   color: #333;
   margin: 5px 0 0 17px;
-  width: 20%;
+  width:230px;
 
   &:hover {
     border-color: #555;
