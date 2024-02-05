@@ -103,7 +103,7 @@ const Header = ({ onSearch, onGenreChange }) => {
           <ul>
             <li><Link to="/Cards">Home</Link></li>
             <li><Link to="/sabonner">Pricing</Link></li>
-            <li><Link to="/watchlist">WatchList</Link></li>
+            {/* <li><Link to="/watchlist">WatchList</Link></li> */}
           </ul>
         </Nav>
         <SearchInput

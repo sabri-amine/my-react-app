@@ -6,6 +6,8 @@ import HomeSlider from '../project/HomeSlider';
 import Scroll from './Scroll';
 import CardComponent from './Objet';
 import Footer from './Footer';
+import { useDispatch, useSelector } from 'react-redux';
+import  { search,filter,all }  from '../redux/filmslice/filmslice';
 
 const CardContainer = styled.div`
   display: flex;
@@ -122,7 +124,9 @@ h6 .bi{
 `;
 
 const Cards = () => {
-  const [data, setData] = useState([]);
+  const films=useSelector(state=> state.film)
+  const dispatch=useDispatch()
+  console.log('films:',films)
   const [selectedGenre, setSelectedGenre] = useState('All');
   const [search, setSearch] = useState('');
 
@@ -134,14 +138,13 @@ const Cards = () => {
     try {
       const response = await fetch('http://localhost:3001/movies');
       const result = await response.json();
-      setData(result);
+      dispatch(all(result))   /**dispatch kadir nafs haja li kadir siteseData**/
     } catch (error) {
       console.error('Erreur lors de la récupération des données :', error);
     }
   };
-
   const filterData = () => {
-    return data.filter(
+    return films.filter(
       (item) =>
         (selectedGenre === 'All' || item.genre === selectedGenre) &&
         (!search || item.nom.toLowerCase().includes(search.toLowerCase()))

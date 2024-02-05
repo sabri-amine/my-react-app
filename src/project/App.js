@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Cards from './Cards';
@@ -7,10 +6,12 @@ import DetailsPage from './details';
 import Sabonner from './Sabonner';
 import SignUp from './SignUp';
 import AuthData from './AuthData';
-
-
+import { Provider } from 'react-redux';
+import store from '../redux/store';
 export default function App() {
   return (
+      <Provider store={store} > 
+        {/* /** Redux provider ** */}
     <Router>
       <div>
         <Routes>
@@ -24,6 +25,6 @@ export default function App() {
       </div>
     </Router>
 
-
+</Provider>
   );
 }
