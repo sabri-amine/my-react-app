@@ -1,13 +1,19 @@
 import React, { useEffect, useState } from 'react';
+// Import des fonctions nécessaires depuis Firebase
 import { onAuthStateChanged, signOut } from 'firebase/auth';
+// Import de l'objet auth depuis le fichier firebase
 import { auth } from './firebase';
+// Import de la fonction utilisée pour la navigation
 import { useNavigate } from 'react-router-dom';
 
 const AuthData = () => {
+// Utilisation de useState pour gérer l'état des données d'authentification
   const [authUser, setAuthUser] = useState(null);
+  // Utilisation de useNavigate pour la navigation
   const navigate = useNavigate();
 
   useEffect(() => {
+  // Appel de la fonction lors du changement d'état d'authentification
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         setAuthUser(user);
@@ -15,7 +21,6 @@ const AuthData = () => {
         setAuthUser(null);
       }
     });
-
     return () => {
       unsubscribe();
     };

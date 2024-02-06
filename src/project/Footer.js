@@ -154,14 +154,13 @@ const Footer = () => {
                 style={{ width: '60px', backgroundColor: '#7c4dff', height: '2px' }}
               />
               <p> 
-                <i class="bi bi-house-fill mr-3">  New York, NY 10012, US</i>
+                <i class="bi bi-house-fill mr-3"> SAFI , QU BLAD JAD, MAROC</i>
               </p>
               <p>
-                <i class="bi bi-envelope-fill mr-3">  info@example.com</i>
+                <i class="bi bi-envelope-fill mr-3">  info@gmail.com</i>
               </p>
               <p>
-                 
-                <i class="bi bi-telephone-fill mr-3">  + 01 234 567 88</i>
+                <i class="bi bi-telephone-fill mr-3">  05 78 68 24 10</i>
               </p>
             </LinkColumn>
           </LinksContainer>
@@ -171,7 +170,7 @@ const Footer = () => {
       <CopyrightSection className="text-center p-3">
         © 2020 Copyright:   
         <a href="https://mdbootstrap.com/" className="text-white">
-          MDPress.com
+          Watchin.com
         </a>
       </CopyrightSection>
     </StyledFooter>

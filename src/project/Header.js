@@ -45,7 +45,7 @@ const Nav = styled.nav`
   }
 
   a:hover {
-    color: #f59e0b;
+    color: red;
   }
 `;
 
